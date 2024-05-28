@@ -32,6 +32,7 @@ COPY --chown=customuser:customgroup . .
 RUN chown -R customuser:customgroup /app
 RUN chmod +w /app/public
 RUN chown -R customuser:customgroup /var /run
+RUN chown -R customuser:customgroup /var/www
 
 # disable root user
 RUN passwd -l root
